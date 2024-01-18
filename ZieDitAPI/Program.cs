@@ -10,7 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("MyCorsPolicy",
-        corsBuilder => corsBuilder.WithOrigins("http://127.0.0.1:5500")
+        corsBuilder => corsBuilder.WithOrigins(/*"http://127.0.0.1:5500"*/ "*")
         .AllowAnyHeader()
         .AllowAnyMethod());
 });
@@ -46,4 +46,4 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-app.Run();
+app.Run(url:"https://*:7054");

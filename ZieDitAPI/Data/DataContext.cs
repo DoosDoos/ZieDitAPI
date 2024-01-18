@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using System.Xml.Serialization;
 using ZieDitAPI.Models;
 
 namespace ZieDitAPI.Data
